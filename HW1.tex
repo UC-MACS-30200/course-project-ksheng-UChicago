@@ -12,7 +12,7 @@
 
 \title{Annotated Bibliography}
 \author{Kuang Sheng}
-\date{March 21, 2024}
+\date{March 23, 2024}
 
 \begin{document}
 
@@ -22,13 +22,6 @@
 \textbf{Link to my Github Repo:} \href{Add link to your github repo here}{https://github.com/UC-MACS-30200/course-project-ksheng-UChicago}\\
 \textbf{Research Topic/Question:} how much does urban green space (UGS) cost in Chicago’s residential real estate?
 
-
-\section*{General}
-
-You should specify the relevant bibliographic information in the head of your document. E.g.
-
-
-While in a regular article or a paper, you'd generally just cite papers through the body of the paper and then include full information on your sources in your bibliography, in an annotated bibliography you want to include a full citation of a paper followed by some annotations. You can do this using the \verb|\fullcite{}| command. For example:
 
 \begin{enumerate}
     \item  \fullcite{astell-burt_mental_2013}\\ \\ This paper summarizes a study conducted in New South Wales, Australia between 2006 and 2009, based on one’s psychological distress and the percentage green space around one’s residence. This study conducted a multilevel logit regression and concluded that for middle-to-older age adults, more green space has a significantly positive influence on people’s psychological health if they adopt an active lifestyle. This paper demonstrates the importance of green space implementation by building and illustrating a strong relationship between urban green space and urban resident’s mental health. The study depicts green space as a positive factor in determining residential quality and provides my research questions with adequate theoretical support in relating urban green space to property values and urban social justice.
@@ -48,102 +41,6 @@ While in a regular article or a paper, you'd generally just cite papers through 
      \item  \fullcite{eshtiyagh_graph-based_2023}\\ \\ This research incorporates machine learning methodologies to study the different factors influencing gentrification in major US cities. One of the factors considered in the machine learning tasks was green space identification based on satellite imagery. Gentrification is one of the major causes of housing price appreciation in the US. Understanding the relationship between UGS and gentrification can help explain the segregation between urban neighborhoods and evaluate the economic value of UGS.
 \end{enumerate}
 
-However, as you'll see below, given the appropriate formatting of your .bib file, you can also compile an annotated bibliography straight from the .bib file using ``style=reading." (Not possible if syncing with Zotero or Mendeley.)
-
-\FloatBarrier
-\section*{Zotero}
-
-There are two ways you can add notes in Zotero: You can add a short note into an item's bibliographic info (in the `Extra' field), or you can attach a Note to the file, which will show up in the list of your items and in the ``Notes" tab\\
-
-
-
-
-
-abcdefefsfsf\fullcite{chen_spatial_2022}
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.5\textwidth]{screenshots/Zotero1a.png}
-\caption{Example of the `Extra' field in Zotero}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\textwidth]{screenshots/Zotero1b.png}
-\includegraphics[width=\textwidth]{screenshots/Zotero1c.png}
-\caption{Example of the `attached Note' in Zotero}
-\end{figure}
-
-The two function very differently. The `Extra' field will appear in the .bib file in the `note' field, and the `attached Note' will not. Furthermore, the attached Note is a lot more flexible in terms of formatting, and can even link to highlighted text in the file.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\textwidth]{screenshots/Zotoero2.png}
-\caption{The `Extra' field from Zotero appears as the `note' field in the synced .bib file}
-\end{figure}
-
-
-
-We \textbf{do not} recommend you use the ``Extra" field to create annotations, as the note field will be included when you print your bibliography. This field is better suited for relevant bibliographic information that you can't fit into any other fields in Zotero.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics{screenshots/Zotero3b.png}
-\includegraphics{screenshots/Zotero3c.png}
-\caption{The `Extra' field from Zotero prints in both default and apa styles}
-\end{figure}
-
-
-Instead, it's probably the easiest if you keep your annotations as an attached note, and then copy-paste the contents of those into your annotated bibliography document. 
-
-\FloatBarrier
-\section*{Mendeley}
-In general, there are two ways of creating notes in Mendeley, though if working in a Group library, you can only use one of those, as ``Notebooks" are, unfortunately unavailable. That said, in general, Notebooks are a great way of organizing your sources and quotes by topic and can be very helpful in building a literature review.
-
-Your only option then is to use the ``General Notes`` in the Annotations tab. This functions pretty much like the ``Extra" field in Zotero and if you export the .bib file from Mendeley, what you include in the Annotations tab will show up in the ``note"  field. However, it seems that the Mendeley API does not export that field and therefore the field \textbf{will not appear} in your references on Overfleaf if you have it linked to Mendeley.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\textwidth]{screenshots/Mendeley1a.png}
-\includegraphics[width=\textwidth]{screenshots/Mendeley2.png}
-\caption{the `Annotations' from Mendeley might not appear in a synced .bib file on Overleaf.}
-\end{figure}
-
-
-Without any additional info in the .bib file, your references will print normally, and you should simply use a combination of \verb|\fullcite{}| and copy-pasted annotations to compile your bibliography.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics{screenshots/Mendeley3a.png}
-\end{figure}
-
-\FloatBarrier
-\section*{.bib file}
-
-Using a .bib file, you can take advantage of the field ``annote" which functions differently from the ``note" field in two important ways. First, it doesn't generally print when you print your bibliography (unless using a `non-standard' biblatex style, such as \textit{apa}). Second, using ``style=reading"  will print the annotation and label it as an annotation. This means that in order to compile the annotated bibliography from your .bib file, you simply have to change your style and you don't have to do any copy-pasting (make sure to format any text in the annotation in a LaTeX-friendly way, using escape characters when necessary).
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\textwidth]{screenshots/Bib2.png}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics{screenshots/Bib3a.png}
-\caption{Using the reading style and printing your bibliography will create your annotated bibliography for you}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics{screenshots/Bib3c.png}
-\caption{biblatex styles, such as the default/non-specified style, do not print the annotations in the bibliography.}
-\end{figure}
-
-
-\begin{figure}[!ht]
-\centering
-\includegraphics{screenshots/Bib3b.png}
-\caption{However, apa style does include the annotation in the bibliography, so you should avoid it if you have information in the `annote' field, or you have to write a bit more code to suppress the field. The abstract field is suppressed}
-\end{figure}
 
 \end{document}
 
