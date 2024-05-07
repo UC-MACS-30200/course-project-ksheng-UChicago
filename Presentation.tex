@@ -22,17 +22,206 @@
 
 \section{Introduction}
 \subsection{Background Overview}
-\subsection{Research Question}
+
+\begin{frame}
+\frametitle{Background Overview}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.35\textwidth]{Visual/MPark.jpg}
+\end{figure}
+Urban Green Space (UGS) shows continuous influence on urban residents’ \alert{well-being, urban social equality, and economic benefits} in previous studies. Studying the actual value of UGS in different urban environments can help justify people’s natural preference for green space in the city, facilitate policies to alleviate urban segregation, and create significant economic benefits by improving land value.
+\end{frame}
+
+\subsection{Literature}
+
+\begin{frame}
+\frametitle{Literature}
+Previous research utilized governmental park space datasets to prove a positive relationship between housing prices and the proximity to and the type of UGS. More recent research acknowledges the deficiency of such data methodology because \alert{minor green space} and \alert{private green space} are ignored. I conducted a pilot study and found a negative correlation between UGS and housing prices. I assume the major reasons include not considering the type of UGS and the current governmental dataset's failure to provide an objective description of UGS distribution.
+\end{frame}
+
+\begin{frame}
+\frametitle{Literature (cont.)}
+Meanwhile, geographers and psychologists in \alert{spatial cognition} recognize how green space interacts with personal well-being. Based on the theoretical framework of \alert{time geography}, one can quantify the green space interaction percentage to compare and understand the functionalities of UGS from the spatial cognition point of view of different participants. 
+\end{frame}
+
+\subsection{Research Questions}
+
+\begin{frame}
+\frametitle{Research Questions}
+
+\begin{itemize}
+    \item What is the economic value of UGS in the city center vs. the city fringe?
+    \item How does the spatial cognition differ between tourists and residents in landmark UGS?
+\end{itemize}
+
+\end{frame}
+
 \section{Data and Methodology}
 \subsection{Data Collection}
-\subsection{Data Analysis}
-\subsection{Methodology}
-\section{Initial Findings}
+
+\begin{frame}
+\frametitle{Data Collection}
+
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Visual/landsat.jpeg}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Visual/redfin-logo-square-red-1200.png}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Visual/timegeo.jpeg}
+  \end{minipage}
+\end{figure}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{UGS Distribution} & \textbf{Housing Price} & \textbf{Time Geography} \\
+\hline
+Landsat Satellite Imagery & Redfin.com & Survey Data \\
+\hline
+In progress & Completed & Proposed\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\subsection{Data Cleansing and Processing}
+
+\begin{frame}
+\frametitle{Data Cleansing and Processing}
+NDVI is a standardized index that calculates the greenness (biomass) based on satellite imagery. This
+index calculates the contrast between two bands — the chlorophyll pigment absorption in the red band and the high reflectivity of plant material in the near-infrared (NIR) band. 
+
+A high NDVI value means rich vegetation in the area. A moderate NDVI value means grassland and shrubs. A very low NDVI means no vegetation, like ocean, cloud, or rocky areas. NDVI value is calculated
+by the following formula:
+
+NDVI = ((IR - R)/(IR + R)) 
+
+• IR = pixel values from the infrared band 
+
+• R = pixel values from the red band
+\end{frame}
 
 
 \begin{frame}
-\frametitle{Title}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\frametitle{Data (cont.)}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Visual/‎workflow_pre.jpeg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Data (cont.)}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Visual/‎survey.jpeg}
+\end{figure}
+\end{frame}
+
+\subsection{Methodology}
+
+\begin{frame}
+\frametitle{Methodology}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.55\textwidth]{Visual/concentric.jpg}
+\end{figure}
+For the first part of the study, I plan to compare the ML coefficients of UGS based on NDVI in housing price prediction by separately considering UGS in the city center and the city fringe. The assumption is that people show different purchasing preferences in different urban environments.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Methodology (cont.)}
+
+For the second part of the study, I plan to analyze the participants’ interaction with green space based on the types of locations in the two study groups. 
+Comparing the results of both study groups can measure the degree of UGS interaction between tourists and residents when they visit a landmark UGS and provide first-hand data for analyzing how different groups in the city utilize landmark UGS differently.
+
+
+\end{frame}
+
+\section{Conclusion}
+\subsection{Initial Findings}
+
+\begin{frame}
+\frametitle{Initial Findings}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Visual/heat_pre.jpeg}
+\end{figure}
+\end{frame}
+
+\subsection{Feasibility}
+
+\begin{frame}
+\frametitle{Feasibility}
+This project is suitable for my educational background and work experience. Professor Crystal Bae and Professor Yue Lin from the Center for Spatial Data Science can be my advisors.
+
+This study can contribute to evaluating the economic benefits of UGS in different urban environments because the result of the pilot study and previous data collection methodology of the existing research show an underestimation of the UGS value. What is more, the time geography analysis of the research further measures if and how the residents utilize the landmark UGS differently from the tourists. The research outcome will provide a comprehensive analysis of the economic value and spatial cognitive function of UGS and can provide useful suggestions to city planners and governors on generating the most optimal economic and social benefits/outcomes with limited UGS funding. 
+
+
+\end{frame}
+
+\subsection{Timeline}
+
+\begin{frame}
+\frametitle{Timeline}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Task/Event} & \textbf{Time} & \textbf{Progress} \\
+\hline
+Redfin Data Collection & Winter 2024 & Finished \\
+\hline
+Satellite Imagery Data Collection & Now - Summer 2024 & En Route \\
+\hline
+NDVI Analysis & Summer 2024 & En Route\\
+\hline
+ML Model Analysis & Fall 2024 & Upcoming\\
+\hline
+Survey Design & Fall 2024 & Upcoming\\
+\hline
+Survey Conduction & Winter 2025 & Upcoming\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\subsection{Cost}
+
+\begin{frame}
+\frametitle{Cost}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Task/Event} & \textbf{Cost} & \textbf{Funding} \\
+\hline
+Redfin Collection & Free & N/A \\
+\hline
+Satellite Imagery Collection & Free/USGS & N/A\\
+\hline
+Survey Conduction & MTurk(200 USD) & Scholarship or JLL\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{GitHub QR Code}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.55\textwidth]{Visual/qrcode_github.com.png}
+\end{figure}
 \end{frame}
 
 \end{document}
