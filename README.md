@@ -22,6 +22,6 @@ Urban Green Space (UGS) shows continuous influence on urban residents’ well-be
 
 ### Citation:
 
-Kuang Sheng (2024). Evaluating Urban Green Space. GitHub. Version 1.0. https://github.com/username/repository
+Kuang Sheng (2024). Evaluating Urban Green Space. GitHub. https://github.com/UC-MACS-30200/course-project-ksheng-UChicago
 
 
