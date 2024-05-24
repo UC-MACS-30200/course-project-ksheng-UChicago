@@ -29,19 +29,25 @@
   \centering
   \includegraphics[width=0.35\textwidth]{Visual/MPark.jpg}
 \end{figure}
-Urban Green Space (UGS) shows continuous influence on urban residents’ \alert{well-being, urban social equality, and economic benefits} in previous studies. Studying the actual value of UGS in different urban environments can help justify people’s natural preference for green space in the city, facilitate policies to alleviate urban segregation, and create significant economic benefits by improving land value.
+In previous studies, Urban Green Space (UGS) shows continuous influence on urban residents’: 
+\frametitle{Overview}
+\begin{itemize}
+    \item Well-Being
+    \item Economic Benefits
+    \item Social Equality
+\end{itemize}
+Studying the value of UGS in different urban environments can advocate a better urban environment, generate economic benefits, and alleviate urban segregation.
 \end{frame}
 
 \subsection{Literature}
 
 \begin{frame}
 \frametitle{Literature}
-Previous research utilized governmental park space datasets to prove a positive relationship between housing prices and the proximity to and the type of UGS. More recent research acknowledges the deficiency of such data methodology because \alert{minor green space} and \alert{private green space} are ignored. I conducted a pilot study and found a negative correlation between UGS and housing prices. I assume the major reasons include not considering the type of UGS and the current governmental dataset's failure to provide an objective description of UGS distribution.
-\end{frame}
-
-\begin{frame}
-\frametitle{Literature (cont.)}
-Meanwhile, geographers and psychologists in \alert{spatial cognition} recognize how green space interacts with personal well-being. Based on the theoretical framework of \alert{time geography}, one can quantify the green space interaction percentage to compare and understand the functionalities of UGS from the spatial cognition point of view of different participants. 
+\begin{itemize}
+    \item Previous research: utilized governmental park space datasets to prove a positive relationship between housing prices and the proximity to and the type of UGS
+    \item Recent research: acknowledges the deficiency of such data methodology because \alert{minor green space} and \alert{private green space} are ignored.
+    \item Gap: I assume the major reasons include not considering the type of UGS and the current governmental dataset's failure to provide an objective description of UGS distribution.
+\end{itemize}
 \end{frame}
 
 \subsection{Research Questions}
@@ -50,8 +56,7 @@ Meanwhile, geographers and psychologists in \alert{spatial cognition} recognize 
 \frametitle{Research Questions}
 
 \begin{itemize}
-    \item What is the economic value of UGS in the city center vs. the city fringe?
-    \item How does the spatial cognition differ between tourists and residents in landmark UGS?
+    \item What is the economic value in real estate evaluation of UGS in the city center vs. the city fringe?
 \end{itemize}
 
 \end{frame}
@@ -97,35 +102,25 @@ In progress & Completed & Proposed\\
 
 \begin{frame}
 \frametitle{Data Cleansing and Processing}
-NDVI is a standardized index that calculates the greenness (biomass) based on satellite imagery. This
-index calculates the contrast between two bands — the chlorophyll pigment absorption in the red band and the high reflectivity of plant material in the near-infrared (NIR) band. 
 
-A high NDVI value means rich vegetation in the area. A moderate NDVI value means grassland and shrubs. A very low NDVI means no vegetation, like ocean, cloud, or rocky areas. NDVI value is calculated
-by the following formula:
+\centering
+\alert{NDVI = ((IR - R)/(IR + R))}
+\begin{itemize}
+    \item IR = pixel values from the infrared band
+    \item R = pixel values from the red band
+\end{itemize}
 
-NDVI = ((IR - R)/(IR + R)) 
+NDVI measures the greenness (biomass) based on satellite imagery. \textcolor{gray}{This
+index calculates the contrast between two bands — the chlorophyll pigment absorption in the red band and the high reflectivity of plant material in the near-infrared (NIR) band. }
 
-• IR = pixel values from the infrared band 
+    \item A high NDVI value means rich vegetation in the area. 
 
-• R = pixel values from the red band
+    \item A moderate NDVI value means grassland and shrubs. 
+    
+    \item A very low NDVI means no vegetation, like ocean, cloud, or rocky areas. 
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Data (cont.)}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1.0\textwidth]{Visual/‎workflow_pre.jpeg}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Data (cont.)}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1.0\textwidth]{Visual/‎survey.jpeg}
-\end{figure}
-\end{frame}
 
 \subsection{Methodology}
 
@@ -139,14 +134,7 @@ For the first part of the study, I plan to compare the ML coefficients of UGS ba
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Methodology (cont.)}
 
-For the second part of the study, I plan to analyze the participants’ interaction with green space based on the types of locations in the two study groups. 
-Comparing the results of both study groups can measure the degree of UGS interaction between tourists and residents when they visit a landmark UGS and provide first-hand data for analyzing how different groups in the city utilize landmark UGS differently.
-
-
-\end{frame}
 
 \section{Conclusion}
 \subsection{Initial Findings}

@@ -1,59 +1,38 @@
 % If you want to compile this section only, make sure to include relevant document headers and the \being \end document commands.
 % You can make this a bit easier if you use the subfile package
 
-\documentclass{article}
-\usepackage{geometry}
-\usepackage{lipsum} 
-\usepackage{listings}
-\usepackage{graphicx}
+Based on the literature review, I hypothesize that solely depending on the governmental dataset for UGS distribution is not adequate. Introducing satellite imagery data can enhance the objective evaluation of UGS value, so for research design, I will utilize several computational technologies, including web scrapping, and satellite imagery analysis using Python and GIS. Firstly, I confined my data collection to the city of Chicago, IL. I picked Chicago for several reasons: 1) Chicago is a successful city in implementing UGS. There are designed green spaces in both the urban environment (the Millennial Park) and the suburban environment (the Palmisano Nature Park); 2) as the third most populous city in the United States, Chicago has abundant data availability in satellite imagery data and online housing big data. On December 3rd, 2023, Redfin (an online housing brokerage platform) recorded a total of 6,996 listed properties in Chicago; 3) due to the city's history, the neighborhoods in Chicago show significant diversity and segregation \parencite{roseman_ethnicity_1996}. I expect to see data abundance and diversity in different Chicago neighborhoods which helps match and compare properties based on their characteristics in my research; 4) I am currently based in Chicago. I can conduct field trips to local neighborhoods for community case studies when necessary.
 
-\title{Data and Methods}
-\author{Kuang Sheng}
-\date{April 15th, 2024}
+As discussed in the literature review, the knowledge gap is associated with the current UGS data collection, so I will focus on enhancing the data quality by incorporating satellite imagery data and real estate big data. I plan to collect the data in two categories: 1) green space distribution data based on remote sensing and satellite imagery and 2) listing price and related characteristics of residential real estate extracted from Redfin. 
 
-\begin{document}
-\maketitle
+For 1) green space distribution data, I plan to extract the data from satellite imagery: the 2017 lidar (light detection and ranging) data of the United States Geological Survey (USGS). As a type of remote-sensing satellite imagery, lidar data provides a comprehensive record of the landscape by catching both the amount and the location of vegetation on the ground. My background in GIS can help extract green space distribution information by calculating the normalized difference vegetation index (NDVI). According to the ArcGIS Pro NDVI documentation, NDVI is a standardized index that calculates the greenness (biomass) based on satellite imagery. This index calculates the contrast between two bands — the chlorophyll pigment absorption in the red band and the high reflectivity of plant material in the near-infrared (NIR) band. A high NDVI value means rich vegetation in the area. A moderate NDVI value means grassland and shrubs. A very low NDVI means no vegetation, like ocean, cloud, or rocky areas. NDVI value is calculated by the following formula:
 
+\begin{center}
+NDVI = ((IR - R)/(IR + R)) 
 
+IR = pixel values from the infrared band
 
-\section*{Research Question}
-What is the true value of urban green space (UGS) in the city of Chicago?
+R = pixel values from the red band
+\end{center}
 
-\section*{Description}
-I collected property listing data from Redfin and performed a spatial analysis in a pilot study to understand the relationship between property listing price and the property’s locational and internal features. Here are some initial results and visualizations of machine learning tasks of the pilot study.
+Incorporating NDVI can avoid the data limitations of the previous research designs by expanding the definition of UGS from registered park spaces to sidewalk trees and bushes in front of the residential porch. We can imagine the different feelings of walking across a highway viaduct under the sun versus walking through a street covered by the canopy of handsome sidewalk trees. Such small-scale but widespread UGS can influence people’s daily experience of their living environment. My enhanced data collection can fill in the gap and fix the previous data deficiency.
 
-\subsection*{Workflow Presentation}
+For 2) property price and related characteristics, I collected data from Redfin (Figure 1), a major online residential real estate brokerage platform, using web scrapping techniques. Redfin was founded in 2004 and recorded a 0.80\% market share in the United States by the number of units sold and had about 2,000 lead agents in the year 2022. The benefit of web scrapping data from Redfin is that, as a brokerage platform, Redfin pulls data and records from Multiple Listing Service (MLS), an online service utilized by both buyers and sellers to see all homes currently for sale by brokers, which ensures data accessibility and data efficiency. What is more, besides basic information about the listings (like price, size, location, and number of bedrooms), Redfin also provides multiple scores measuring the different characteristics of the property, including school district rating, neighborhood walkability, transportation convenience, etc. These scores can contribute as variables in the hedonic regression model and become confounders to be controlled. In the past research design, researchers usually had to collect data from different sources, like commercial points of interest (POI), public transportation data, and school district regulation, to implement a comprehensive research design. Using big data collected from Redfin can significantly enhance data collection efficiency and standardization.
+
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{Visual/workflow.jpeg}
-  \caption{Workflow Presentation}
+    \centering
+    \includegraphics[width=1\textwidth]{Visual/‎final_workflow.jpeg}
+    \caption{Redfin Data Cleansing and Analysis Workflow}
 \end{figure}
 
-This graph shows the workflow of my pilot study. For my research design, I will enrich the data complexity and accuracy at the spatial analysis stage by incorporating NDVI calculated based on the USGS satellite imagery data to compare the machine learning results.
+For the research design, based on the locational overlay of both datasets, I will examine the relationship between them using a hedonic regression model, a model widely used for the housing market, wherein both the characteristics of the property itself (internal) and its surrounding environment (external) influence the property price. By controlling all the other factors that might influence the property price, the hedonic regression can show whether there is a positive relation between green space and the housing price and how much the premium of green space in the housing market costs. 
 
-\subsection*{Correlation Heat Map}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{Visual/heatmap.jpeg}
-  \caption{Correlation Heat Map}
-\end{figure}
+Housing big data from Redfin can also enhance the data size and quality. Although the hedonic regression model has been widely applied to understand the relation between housing price and UGS, very few researchers have incorporated housing big data in their study. With the fast development of online brokerage platforms, housing data become more available to the public. Past research design relied on official records, which are usually outdated and homogenous. By contrast, the data of online brokerage platforms are both enormous and always-on. For example, data web scrapped from Redfin are comprehensive. They include price, location, property facilities, education quality, connectivity, etc., which cover all the factors buyers consider during house hunting. What is more, the data are publicly available to all users with access to the internet, which helps avoid any potential ethical concerns.
 
-\subsection*{Initial Results}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{Visual/results.jpeg}
-  \caption{Initial Results}
-\end{figure}
+While basic information (number of bedrooms, address) can be trustworthy, there might be concerns about relying on the scores (walkability, transportation, school district) generated by the algorithm of the platform. I argue that although Redfin is a brokerage platform, their service is nationwide. Thanks to the diversity of their listings, we expect to see an objective evaluation of the property’s surrounding environment. What is more, traditional methodology collected school district data from the government or local education department, which can be sensitive and biased. The scores on Redfin are a very reasonable alternative, which provides an objective reference from a homeowner’s point of view.
 
-In the correlation heat map, park proximity (distance to park) shows a negative correlation with the housing price, which contradicts with the theories and research outcomes in literature review. I assume this is caused by the deficiency of the current UGS dataset. In Initial Results, the graph shows the coefficient of the different features in the optimal machine learning model. Both locational and internal features play an important role in predicting the housing price. However, locational features play a more significant role here. Unfortunately, based on the result of current park proximity data, I do not discover a significant correlation or causing factor. I plan to compare the results of the analysis that includes satellite imagery data with the current data to see if the UGS-related features become more significant with the enhanced dataset.
+Regarding validity, the overall research design is based on the application of the hedonic regression model, which has been used in analyzing the relationship between environment and housing price for decades, which provides solid statistical conclusion validity. The data collection and GIS analytics of satellite imagery lidar data from USGS reflect strong internal validity by introducing an objective evaluation (NDVI) of green space distribution. In previous research designs, researchers relied on official records, which only included government-planned green spaces. By avoiding the potential bias of government-led city planning, the satellite imagery lidar data can reflect UGS in the real-world environment more objectively. Regarding external validity, my research method can be applied anywhere there is available and accessible high-resolution satellite imagery data. At the same time, Redfin is a nationwide platform, so the methodology can be applied to any American city. There are also online housing platforms with similar functionalities in other countries, where this research design can be reproduced.
 
-For mocked-up results, I plan to show the coefficient ranking based on the satellite imagery data and compare it with the pilot study to see if the data enrichment and enhancement did add more weight onto the predicting capabilities of UGS. Also, I plan to visualize the different features discussed using maps to better visualize the interrelation with property value.
+Although the housing data from Redfin have multiple advantages in data size and data timeliness, web scrapping housing prices within a short period can be potentially biased due to market supply, market demand, and holiday season, which can lead to potential errors. To alleviate such errors, I plan to collect data multiple times throughout the year during my research period. Getting an average of the housing price data can depict a more holistic image of the housing market and increase internal validity.
 
-\subsection*{Example Map}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{Visual/examplemap.jpeg}
-  \caption{Example Map}
-\end{figure}
-
-\end{document}
+By controlling different confounders like school district rating, neighborhood walkability, and transportation convenience, I plan to find the statistical relation between UGS and housing prices in Chicago. However, I acknowledge the difficulty of making a causal claim between them. I cannot easily conclude whether it is the UGS that causes local housing prices to increase or the other way around. It is an expensive neighborhood that tends to implement more UGS. On the USGS data portal, it is possible to access historical satellite imagery data. Hence, for a better research design, I (or future researchers) should also look deeper into historical housing data or satellite imagery data. Using the historical change of UGS in different neighborhoods as a treatment to compare the housing prices to test defining a causal relationship between the two features.
